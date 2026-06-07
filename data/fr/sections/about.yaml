@@ -8,10 +8,10 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Software Engineer
+designation: Coordinatrice numérique
 # your company information
 company:
-  name: Example Co.
+  name: 
   url: "https://www.example.com"
 
 # your resume. this file path should be relative to you "static" directory
@@ -19,7 +19,7 @@ company:
 # resume: "files/resume.pdf"
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
+summary: "Passionnée par le numérique depuis de nombreuses années, je gère aujourd'hui un espace de coworking et je crée des parcours de formation en ligne.."
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -60,7 +60,7 @@ socialLinks:
 # You can put custom buttons to link your relevant resources.
 # For example, you can put link for your resume.
 resourceLinks:
-- title: "My Resume"
+- title: "Mon CV"
   url: "files/resume.pdf"
 
 # Show your badges
