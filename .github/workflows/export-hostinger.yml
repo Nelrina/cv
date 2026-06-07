@@ -1,0 +1,34 @@
+name: Fabriquer mon site pour Hostinger
+
+on:
+  push:
+    branches:
+      - main  # Déclenche le robot à chaque fois que vous enregistrez sur la branche main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Le robot récupère vos fichiers de CV
+      - name: Recouvrer le code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      # 2. Le robot installe Hugo (C'est l'action que vous avez trouvée !)
+      - name: Installer Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true # Important pour le thème Toha
+
+      # 3. Le robot fabrique le site
+      - name: Compiler le site statique
+        run: hugo --gc --minify
+
+      # 4. Le robot met le résultat dans un fichier ZIP téléchargeable
+      - name: Créer le dossier ZIP pour Hostinger
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-final-hostinger
+          path: public/  # Hugo range le site final dans un dossier nommé "public"
